@@ -1,0 +1,120 @@
+.today-highlights-container {
+  background-color: #4b5563;
+  color: white;
+  width: 840px;
+  border-radius: 0.5rem;
+  padding: 30px;
+}
+
+.highlight-header {
+  font-size: 20px;
+}
+
+.highlight-sections {
+  display: flex;
+  gap: 18px;
+}
+
+.air-quality-section,
+.sunrise-sunset-section {
+  background-color: #374151;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 11px;
+}
+
+.air-quality-section {
+  width: 370px;
+}
+
+.sunrise-sunset-section {
+  width: 385px;
+}
+
+.air-quality-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+}
+
+.air-quality-label {
+  margin-top: 1rem;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: green;
+  height: 20px;
+  width: 45px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pollutant-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.sunrise-sunset-icons {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.sunrise-sunset-time {
+  font-size: 25px;
+  margin: 0 30px;
+}
+
+.highlight-boxes {
+  display: flex;
+  gap: 4px;
+  margin-top: 10px;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .today-highlights-container {
+    width: 100%; /* Full width for smaller screens */
+    padding: 20px; /* Adjust padding for better fit */
+  }
+
+  .highlight-sections {
+    flex-direction: column; /* Stack sections vertically */
+    gap: 15px; /* Adjust gap for smaller screens */
+  }
+
+  .air-quality-section,
+  .sunrise-sunset-section {
+    width: 100%; /* Full width for smaller screens */
+    padding: 15px; /* Reduce padding */
+  }
+
+  .pollutant-grid {
+    grid-template-columns: repeat(2, 1fr); /* Fewer columns for smaller screens */
+  }
+}
+
+/* Further adjustments for very small screens (mobile) */
+@media (max-width: 480px) {
+  .today-highlights-container {
+    padding: 15px; /* Smaller padding for very small screens */
+    width: 90%; /* Slightly narrower for mobile devices */
+  }
+
+  .highlight-header {
+    font-size: 16px; /* Smaller font size */
+  }
+
+  .pollutant-grid {
+    grid-template-columns: 1fr; /* Single column for very small screens */
+    gap: 5px; /* Reduce gap */
+  }
+
+  .sunrise-sunset-time {
+    font-size: 18px; /* Smaller font size */
+  }
+}
